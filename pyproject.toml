@@ -1,16 +1,12 @@
 [build-system]
-requires = ["hatchling", "uv-dynamic-versioning"]
+requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/onedrive_pdf_downloader"]
 
-[tool.hatch.version]
-source = "uv-dynamic-versioning"
-
 [project]
 name = "onedrive_pdf_downloader"
-dynamic = ["version"]
 dependencies = [
     "argparse==1.4.0",
     "attrs==24.2.0",
@@ -64,6 +60,8 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Utilities",
 ]
+# track: https://github.com/astral-sh/uv/pull/12349
+version = "1.0.0.dev4"
 
 [project.urls]
 Repository = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader"
