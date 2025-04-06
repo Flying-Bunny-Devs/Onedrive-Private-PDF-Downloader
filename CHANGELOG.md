@@ -1,3 +1,15 @@
+# [1.0.0-dev.4](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2025-04-06)
+
+
+### Bug Fixes
+
+* update versioning source to use uv-dynamic-versioning ([fb69f7d](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/fb69f7d57e1d23811cfff84aa404ecedfa051484))
+
+
+### Features
+
+* add version information to CLI and package initialization ([2a707b9](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/2a707b95c294a51957c9d397cd5c1192f042f52c))
+
 # [1.0.0-dev.3](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2025-04-06)
 
 
