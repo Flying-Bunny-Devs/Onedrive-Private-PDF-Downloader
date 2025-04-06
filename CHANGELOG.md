@@ -1,3 +1,10 @@
+# [1.0.0-dev.3](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2025-04-06)
+
+
+### Bug Fixes
+
+* add Python 3.10 and 3.11 to classifiers ([a975a4f](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/a975a4f194921316e8390ec7cfcc1f7c2e657bf4))
+
 # [1.0.0-dev.2](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2025-04-06)
 
 
