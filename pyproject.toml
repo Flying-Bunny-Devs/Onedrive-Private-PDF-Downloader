@@ -68,7 +68,7 @@ onedrive-pdf-downloader = "onedrive_pdf_downloader.__main__:main"
 
 [dependency-groups]
 dev = [
-    "pylint>=3.3.3",
+    "pylint>=3.3.6",
     "pytest>=8.3.4",
 ] # in the future, we should write unittests for the code
 
