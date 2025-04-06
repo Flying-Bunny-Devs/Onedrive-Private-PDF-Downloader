@@ -8,15 +8,15 @@ import argparse
 def create_parser() -> argparse.ArgumentParser:
     """
     Create and configure the command line argument parser.
-    
+
     Returns:
         argparse.ArgumentParser: The configured parser
     """
     parser = argparse.ArgumentParser(
-        description="Export a PDF (also the protected ones) from an authenticated session.",
-        epilog="Made with ❤️ by @willnaoosmith and @Francesco146",
+        description="Export a PDF (also the protected ones) from an authenticated session.",  # noqa: E501 pylint: disable=line-too-long
+        epilog="Made with ❤️ by @Francesco146 and @willnaoosmith",
     )
-    
+
     # Browser options
     parser.add_argument(
         "--browser", "-b",
@@ -40,7 +40,7 @@ def create_parser() -> argparse.ArgumentParser:
         default=None,
         metavar="PATH",
     )
-    
+
     # Output options
     parser.add_argument(
         "--output-file", "-o",
@@ -55,19 +55,19 @@ def create_parser() -> argparse.ArgumentParser:
         help="Keep the images after the PDF creation",
         default=False,
     )
-    
+
     # Cache options
     parser.add_argument(
         "--cache-dir", "-r",
         help=(
-            "Search in browser caches for RAW Lossless PDFs, only works with Firefox. "
+            "Search in browser caches for RAW Lossless PDFs, only works with Firefox. "  # noqa: E501 pylint: disable=line-too-long
             "\033[93m\033[1mWARNING: Highly experimental, may cause problems. "
             "Read the documentation before using.\033[0m"
         ),
         required=False,
         metavar="PATH",
     )
-    
+
     # Debug options
     parser.add_argument(
         "--debug", "-d",
@@ -75,12 +75,12 @@ def create_parser() -> argparse.ArgumentParser:
         help="Show debug messages",
         default=False,
     )
-    
+
     # URL argument
     parser.add_argument(
         "url",
         type=str,
         help="URL of the PDF file"
     )
-    
+
     return parser

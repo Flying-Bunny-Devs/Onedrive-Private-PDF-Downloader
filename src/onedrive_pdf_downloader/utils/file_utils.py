@@ -2,10 +2,10 @@
 File-related utility functions.
 """
 
-import logging
-import time
-import shutil
 import argparse
+import logging
+import shutil
+import time
 
 from onedrive_pdf_downloader.cache.finder import find_pdf_in_cache
 
@@ -13,7 +13,7 @@ from onedrive_pdf_downloader.cache.finder import find_pdf_in_cache
 def get_default_filename() -> str:
     """
     Generate a default filename based on current timestamp.
-    
+
     Returns:
         str: Default filename with timestamp
     """
@@ -23,10 +23,10 @@ def get_default_filename() -> str:
 def copy_cached_pdf(args: argparse.Namespace) -> bool:
     """
     Copy a PDF file from browser cache if available.
-    
+
     Args:
         args: Command line arguments
-        
+
     Returns:
         bool: True if successfully copied, False otherwise
     """
@@ -47,9 +47,9 @@ def copy_cached_pdf(args: argparse.Namespace) -> bool:
 
     except FileNotFoundError:
         logging.error(
-            "No PDF file found in the cache directory, continuing with browser-based export."
+            "No PDF file found in the cache directory, continuing with browser-based export."  # noqa: E501 pylint: disable=line-too-long
         )
         return False
-    except Exception as e:
+    except IOError as e:
         logging.error("Error copying cached PDF: %s", str(e))
         return False

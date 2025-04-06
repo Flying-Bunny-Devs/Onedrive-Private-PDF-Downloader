@@ -9,18 +9,20 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 
 from onedrive_pdf_downloader.browser import browser_context, find_element
+from onedrive_pdf_downloader.browser.constants import (
+    CLASS_NAMES_FILE_NAME,
+    CLASS_NAMES_TOTAL_PAGES,
+)
 from onedrive_pdf_downloader.core.export import export_pdf
-from onedrive_pdf_downloader.browser.constants import CLASS_NAMES_TOTAL_PAGES, CLASS_NAMES_FILE_NAME
-from onedrive_pdf_downloader.utils.file_utils import get_default_filename
 
 
 def get_total_pages(browser) -> int:
     """
     Get the total number of pages from the page counter or manual input.
-    
+
     Args:
         browser: Browser instance
-        
+
     Returns:
         int: Total number of pages
     """
@@ -31,7 +33,7 @@ def get_total_pages(browser) -> int:
         logging.info("Total number of pages detected: %d", total_of_pages)
     except (ValueError, NoSuchElementException):
         logging.warning(
-            "The page counter is not visible or class names are not up-to-date."
+            "The page counter is not visible or class names are not up-to-date."  # noqa: E501 pylint: disable=line-too-long
         )
         total_of_pages = int(
             input("Insert the total number of pages manually: "))
@@ -42,11 +44,11 @@ def get_total_pages(browser) -> int:
 def get_output_filename(args, browser) -> str:
     """
     Get the output filename from arguments, detected filename, or manual input.
-    
+
     Args:
         args: Command line arguments
         browser: Browser instance
-        
+
     Returns:
         str: Output filename
     """
@@ -63,7 +65,7 @@ def get_output_filename(args, browser) -> str:
             "The file name is not visible or class names are not up-to-date."
         )
         filename = input(
-            "Insert the file name manually (with the extension e.g.: file.pdf): "
+            "Insert the file name manually (with the extension e.g.: file.pdf): "  # noqa: E501 pylint: disable=line-too-long
         )
         return filename
 
@@ -71,10 +73,10 @@ def get_output_filename(args, browser) -> str:
 def export_pdf_workflow(args):
     """
     Execute the complete PDF export workflow.
-    
+
     Args:
         args: Command line arguments
-        
+
     Returns:
         bool: True if successful, False otherwise
     """
@@ -83,8 +85,8 @@ def export_pdf_workflow(args):
 
         input(
             "Make sure to authenticate and reach the PDF preview. "
-            "Once the file is loaded and the page counter is visible, press [ENTER] to start. "
-            "Keep the browser in the foreground for better results.\n> [ENTER] "
+            "Once the file is loaded and the page counter is visible, press [ENTER] to start. "  # noqa: E501 pylint: disable=line-too-long
+            "Keep the browser in the foreground for better results.\n> [ENTER] "  # noqa: E501 pylint: disable=line-too-long
         )
         sleep(2)  # Give a moment after user input before proceeding
 

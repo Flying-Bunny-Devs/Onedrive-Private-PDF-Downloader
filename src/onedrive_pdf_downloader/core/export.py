@@ -4,29 +4,31 @@ Core functionality for exporting PDFs from web browser.
 
 import logging
 import os
-import tempfile
 import shutil
+import tempfile
 from time import sleep
 
 import img2pdf
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException, JavascriptException
+from selenium.common.exceptions import (  # noqa: E501 pylint: disable=line-too-long
+    JavascriptException,
+    NoSuchElementException,
+)
 from selenium.webdriver.common.by import By
 
-from onedrive_pdf_downloader.browser.utils import find_element, hide_toolbar
 from onedrive_pdf_downloader.browser.constants import ARIA_LABELS_NEXT_PAGE
+from onedrive_pdf_downloader.browser.utils import find_element, hide_toolbar
 
 
 def export_pdf(args, browser, total_of_pages, filename):
     """
     Export the PDF by taking screenshots of each page.
-    
+
     Args:
         args (argparse.Namespace): Command line arguments
         browser (webdriver): Browser instance
         total_of_pages (int): Total number of pages
         filename (str): Output filename
-        
+
     Returns:
         bool: True if successful, False otherwise
     """
@@ -39,7 +41,7 @@ def export_pdf(args, browser, total_of_pages, filename):
             logging.info("Toolbar hidden for clean screenshots.")
         except NoSuchElementException:
             logging.warning(
-                "The toolbar is not visible or class names are not up-to-date. "
+                "The toolbar is not visible or class names are not up-to-date. "  # noqa: E501 pylint: disable=line-too-long
                 "Screenshots might contain the toolbar."
             )
 
@@ -79,7 +81,7 @@ def export_pdf(args, browser, total_of_pages, filename):
                         "arguments[0].click();", next_page_button)
                 except (NoSuchElementException, JavascriptException):
                     logging.error(
-                        "Cannot find the next page button. Navigation aria labels may be outdated. "
+                        "Cannot find the next page button. Navigation aria labels may be outdated. "  # noqa: E501 pylint: disable=line-too-long
                         "Saving the pages obtained so far."
                     )
                     break
@@ -101,6 +103,6 @@ def export_pdf(args, browser, total_of_pages, filename):
             logging.info("PDF export completed successfully.")
             return True
 
-        except Exception as e:
+        except IOError as e:
             logging.error("Error saving PDF: %s", str(e))
             return False

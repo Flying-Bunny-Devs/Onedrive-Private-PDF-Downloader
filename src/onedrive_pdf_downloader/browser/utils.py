@@ -4,10 +4,14 @@ Utility functions for browser interaction.
 
 import logging
 
-from onedrive_pdf_downloader.browser.constants import CLASS_NAMES_TOOLBAR
 from selenium import webdriver
-from selenium.common.exceptions import JavascriptException, NoSuchElementException
+from selenium.common.exceptions import (  # noqa: E501 pylint: disable=line-too-long
+    JavascriptException,
+    NoSuchElementException,
+)
 from selenium.webdriver.common.by import By
+
+from onedrive_pdf_downloader.browser.constants import CLASS_NAMES_TOOLBAR
 
 
 def find_element(browser: webdriver, identifiers: list[str], by: By):
@@ -47,7 +51,7 @@ def find_element(browser: webdriver, identifiers: list[str], by: By):
     )
 
 
-def hide_toolbar(browser: webdriver, class_names: list[str] = CLASS_NAMES_TOOLBAR) -> None:
+def hide_toolbar(browser: webdriver, class_names: list[str] = None) -> None:
     """
     Hide the toolbar to get clean screenshots.
 
@@ -58,16 +62,20 @@ def hide_toolbar(browser: webdriver, class_names: list[str] = CLASS_NAMES_TOOLBA
     Raises:
         NoSuchElementException: If no toolbar is found
     """
+
+    if class_names is None:
+        class_names = CLASS_NAMES_TOOLBAR
     for class_name in class_names:
         try:
             browser.execute_script(
-                f"document.getElementsByClassName('{class_name}')[0].style.visibility = 'hidden'"
+                f"document.getElementsByClassName('{class_name}')[0].style.visibility = 'hidden'"  # noqa: E501 pylint: disable=line-too-long
             )
             logging.debug("Toolbar hidden using class name: '%s'", class_name)
             return
         except (IndexError, NoSuchElementException, JavascriptException):
             logging.debug(
-                "Toolbar not found using class name: '%s'", class_name)
+                "Toolbar not found using class name: '%s'", class_name
+            )
             continue
 
     raise NoSuchElementException(
