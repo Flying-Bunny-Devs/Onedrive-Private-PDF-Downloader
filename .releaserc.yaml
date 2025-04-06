@@ -8,7 +8,7 @@
             [
                 "@semantic-release/git",
                 {
-                    "assets": ["CHANGELOG.md", "pyproject.toml"],
+                    "assets": ["CHANGELOG.md", "pyproject.toml", "uv.lock"],
                     "message": "chore: release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
                 },
             ],

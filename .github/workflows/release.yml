@@ -25,11 +25,12 @@ jobs:
                   enable-cache: true
                   cache-dependency-glob: "**/pyproject.toml"
 
-            - name: Install the project
-              run: uv sync
 
             - name: Set version
               run: uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version $(uvx dunamai from any --no-metadata --style pep440)
+
+            - name: Install the project
+              run: uv sync
 
             - name: Build the project
               run: uv build --wheel
