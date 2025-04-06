@@ -1,13 +1,16 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/onedrive_pdf_downloader"]
 
+[tool.hatch.version]
+source = "vcs"
+
 [project]
 name = "onedrive_pdf_downloader"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = [
     "argparse==1.4.0",
     "attrs==24.2.0",
@@ -54,9 +57,9 @@ classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Communications :: Chat",
     "Programming Language :: Python",
-    'Programming Language :: Python :: 3 :: Only',
-    'Programming Language :: Python :: 3.12',
-    'Programming Language :: Python :: 3.13',
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Utilities",
 ]
 
