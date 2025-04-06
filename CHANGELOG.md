@@ -1,3 +1,10 @@
+# [1.0.0-dev.5](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2025-04-06)
+
+
+### Features
+
+* set project version dynamically and update release assets ([f5c7690](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/f5c76904b069c46f04556e1e2ef67682cbbddf67))
+
 # [1.0.0-dev.4](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.3...v1.0.0-dev.4) (2025-04-06)
 
 
