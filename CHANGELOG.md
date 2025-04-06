@@ -1,3 +1,11 @@
+# [1.0.0-dev.2](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2025-04-06)
+
+
+### Bug Fixes
+
+* adjust pylint command to target src directory ([550d1cb](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/550d1cb23536718aad954c975520070a533cac7d))
+* enable dynamic versioning ([e3b8262](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/e3b8262aa8d9a14024a8804d7c9767b118e40975))
+
 # 1.0.0-dev.1 (2025-04-06)
 
 
