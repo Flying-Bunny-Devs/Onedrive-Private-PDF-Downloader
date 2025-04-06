@@ -1,3 +1,10 @@
+# [1.0.0-dev.6](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2025-04-06)
+
+
+### Bug Fixes
+
+* add fetch-depth option to checkout step in release workflow ([913e865](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/913e8653840c35e6f70630ae63899b28def8153f))
+
 # [1.0.0-dev.5](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.4...v1.0.0-dev.5) (2025-04-06)
 
 
