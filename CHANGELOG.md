@@ -1,3 +1,10 @@
+# [1.0.0-dev.7](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2025-04-06)
+
+
+### Bug Fixes
+
+* include uv.lock in release assets ([072666c](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/072666c5819a950757168423359a064feef9d134))
+
 # [1.0.0-dev.6](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.5...v1.0.0-dev.6) (2025-04-06)
 
 
