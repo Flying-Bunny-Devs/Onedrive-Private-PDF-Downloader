@@ -4,6 +4,8 @@ Command line interface configuration for the application.
 
 import argparse
 
+from . import __version__
+
 
 def create_parser() -> argparse.ArgumentParser:
     """
@@ -15,6 +17,14 @@ def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Export a PDF (also the protected ones) from an authenticated session.",  # noqa: E501 pylint: disable=line-too-long
         epilog="Made with ❤️ by @Francesco146 and @willnaoosmith",
+    )
+
+    # Version option
+    parser.add_argument(
+        "--version", "-v",
+        action="version",
+        version=f"%(prog)s {__version__}",
+        help="Show the version of the script",
     )
 
     # Browser options
