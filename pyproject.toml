@@ -1,12 +1,12 @@
 [build-system]
-requires = ["hatchling", "hatch-vcs"]
+requires = ["hatchling", "uv-dynamic-versioning"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/onedrive_pdf_downloader"]
 
 [tool.hatch.version]
-source = "vcs"
+source = "uv-dynamic-versioning"
 
 [project]
 name = "onedrive_pdf_downloader"

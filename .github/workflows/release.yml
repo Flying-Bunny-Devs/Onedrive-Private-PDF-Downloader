@@ -25,6 +25,7 @@ jobs:
 
             - name: Install the project
               run: uv sync
+
             - name: Build the project
               run: uv build --wheel
 
