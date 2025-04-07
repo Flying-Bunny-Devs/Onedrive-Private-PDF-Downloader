@@ -1,3 +1,10 @@
+# [1.0.0-dev.8](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2025-04-07)
+
+
+### Bug Fixes
+
+* remove unnecessary classifier and add project URLs ([7e90d41](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/7e90d41487ff4e27ea574ecb7b0ac36a6deaf93f))
+
 # [1.0.0-dev.7](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.6...v1.0.0-dev.7) (2025-04-06)
 
 
