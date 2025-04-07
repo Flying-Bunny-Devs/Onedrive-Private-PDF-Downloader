@@ -25,7 +25,6 @@ jobs:
                   enable-cache: true
                   cache-dependency-glob: "**/pyproject.toml"
 
-
             - name: Set version
               run: uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version $(uvx dunamai from any --no-metadata --style pep440)
 
@@ -47,3 +46,6 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: npm exec semantic-release
+
+            - name: Publish to PyPI
+              run: uv publish
