@@ -1,0 +1,30 @@
+name: Pylint
+
+on: [push]
+
+jobs:
+    pylint:
+        name: Pylint
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version:
+                    # in future, we will test more python versions
+                    - "3.10"
+        env:
+            UV_PYTHON: ${{ matrix.python-version }}
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install uv
+              uses: astral-sh/setup-uv@v5
+              with:
+                  enable-cache: true
+                  cache-dependency-glob: "**/pyproject.toml"
+
+            - name: Install the project
+              run: uv sync --all-extras --dev
+
+            - name: Run Pylint
+              run: uv run pylint $(git ls-files 'src/*.py')

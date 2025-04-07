@@ -9,13 +9,12 @@ This project allows you to export PDFs, even those that are protected, from auth
   - [✨ Features](#-features)
   - [👀 Preview](#-preview)
   - [📋 Requirements](#-requirements)
-    - [🐍 Python Packages:](#-python-packages)
     - [🌐 Browsers:](#-browsers)
     - [🔧 Browser Drivers:](#-browser-drivers)
   - [⚙️ Installation and Setup](#️-installation-and-setup)
   - [🚀 Usage](#-usage)
     - [⚡ Command-line Options](#-command-line-options)
-    - [📌 Example Command:](#-example-command)
+    - [🗑️ Uninstall](#️-uninstall)
     - [🛠️ Profile Setup:](#️-profile-setup)
     - [📂 Getting the Cache Path:](#-getting-the-cache-path)
   - [🛠️ Calibrating the Tool](#️-calibrating-the-tool)
@@ -58,13 +57,6 @@ INFO - Browser session ended.
 
 Before running the project, you need the following dependencies:
 
-### 🐍 Python Packages:
-Install the required Python packages using the following command:
-
-```bash
-pip install -r requirements.txt
-```
-
 ### 🌐 Browsers:
 Make sure that you have one of the following browsers installed:
 - Firefox
@@ -79,20 +71,14 @@ Ensure the drivers are in your system’s `PATH` or specify their location expli
 
 ## ⚙️ Installation and Setup
 
-1. Clone this repository:
+1. Install via `pip`:
     ```bash
-    git clone https://github.com/willnaoosmith/Onedrive-Private-PDF-Downloader
-    cd Onedrive-Private-PDF-Downloader
+    pip install onedrive_pdf_downloader
     ```
 
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. Download and install the appropriate browser drivers for your browser.
 
-3. Download and install the appropriate browser drivers for your browser.
-
-4. Optionally, set up a browser profile to retain session information:
+3. Optionally, set up a browser profile to retain session information:
     - **Firefox:**
         - Create a Firefox profile through `about:profiles` in the browser's address bar.
         - Use the `-p` option to specify the path to the Firefox profile directory.
@@ -104,7 +90,7 @@ Ensure the drivers are in your system’s `PATH` or specify their location expli
 To run the script, use the following command structure:
 
 ```bash
-python OnedrivePrivatePDFDownloader.py [options] <url>
+onedrive-pdf-downloader [options]
 ```
 
 ### ⚡ Command-line Options
@@ -119,14 +105,12 @@ python OnedrivePrivatePDFDownloader.py [options] <url>
 | `--cache-dir, -r`    | Search in browser caches for RAW Lossless PDFs (Firefox only).                           | `--cache-dir /path/to/cache`        |
 | `url`                | The URL of the PDF file. This is a required argument.                                    | `https://blabla.sharepoint.com/...` |
 
-### 📌 Example Command:
+### 🗑️ Uninstall
 
+To uninstall the package, you can use pip:
 ```bash
-python OnedrivePrivatePDFDownloader.py --profile-dir /path/to/profile https://blabla.sharepoint.com/...
+pip uninstall onedrive_pdf_downloader
 ```
-
-This command will open Firefox using the specified profile and navigate to the given URL. The script will then export the PDF file and save it in the current directory.
-
 
 ### 🛠️ Profile Setup:
 To use an authenticated session, you may need to use a browser profile where you're already logged in. Here’s how to do that:

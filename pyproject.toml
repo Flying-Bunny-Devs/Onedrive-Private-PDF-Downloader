@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/onedrive_pdf_downloader"]
+
+[project]
+name = "onedrive_pdf_downloader"
+dependencies = [
+    "argparse==1.4.0",
+    "attrs==24.2.0",
+    "certifi==2024.8.30",
+    "deprecated==1.2.15",
+    "h11==0.14.0",
+    "idna==3.10",
+    "img2pdf==0.5.1",
+    "lxml==5.3.0",
+    "outcome==1.3.0.post0",
+    "packaging==24.2",
+    "pikepdf==9.4.2",
+    "pillow==11.0.0",
+    "pysocks==1.7.1",
+    "selenium==4.27.1",
+    "sniffio==1.3.1",
+    "sortedcontainers==2.4.0",
+    "trio==0.27.0",
+    "trio-websocket==0.11.1",
+    "typing-extensions==4.12.2",
+    "urllib3==2.2.3",
+    "websocket-client==1.8.0",
+    "wrapt==1.17.0",
+    "wsproto==1.2.0",
+]
+requires-python = ">=3.10"
+authors = [
+    { name = "Francesco146", email = "49027005+Francesco146@users.noreply.github.com" },
+    { name = "willnaoosmith", email = "55159911+willnaoosmith@users.noreply.github.com" },
+]
+maintainers = [
+    { name = "Francesco146", email = "49027005+Francesco146@users.noreply.github.com" },
+    { name = "willnaoosmith", email = "55159911+willnaoosmith@users.noreply.github.com" },
+]
+description = "A tool to download private PDF files from OneDrive using Selenium."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["onedrive", "pdf", "downloader", "selenium"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+# track: https://github.com/astral-sh/uv/pull/12349
+version = "1.0.0.dev9"
+
+[project.urls]
+Repository = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader"
+Homepage = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader"
+Documentation = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/blob/master/README.md"
+Issues = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/issues"
+Changelog = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/blob/master/CHANGELOG.md"
+
+[project.scripts]
+onedrive-pdf-downloader = "onedrive_pdf_downloader.__main__:main"
+
+[dependency-groups]
+dev = [
+    "pylint>=3.3.6",
+    "pytest>=8.3.4",
+] # in the future, we should write unittests for the code
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]

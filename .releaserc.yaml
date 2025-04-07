@@ -1,0 +1,27 @@
+{
+    "branches": ["master", { "name": "dev", "prerelease": true }],
+    "plugins":
+        [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            [
+                "@semantic-release/git",
+                {
+                    "assets": ["CHANGELOG.md", "pyproject.toml", "uv.lock"],
+                    "message": "chore: release v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
+                },
+            ],
+            [
+                "@semantic-release/github",
+                { "assets": [{ "path": "dist/*.whl" }], successComment: false },
+            ],
+            [
+                "@saithodev/semantic-release-backmerge",
+                {
+                    backmergeBranches: [{ "from": "master", "to": "dev" }],
+                    clearWorkspace: true,
+                },
+            ],
+        ],
+}
