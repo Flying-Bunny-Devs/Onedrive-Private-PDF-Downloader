@@ -243,7 +243,7 @@ wheels = [
 
 [[package]]
 name = "onedrive-pdf-downloader"
-version = "1.0.0.dev9"
+version = "1.0.0.dev10"
 source = { editable = "." }
 dependencies = [
     { name = "argparse" },

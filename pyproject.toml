@@ -60,7 +60,7 @@ classifiers = [
     "Topic :: Utilities",
 ]
 # track: https://github.com/astral-sh/uv/pull/12349
-version = "1.0.0.dev9"
+version = "1.0.0.dev10"
 
 [project.urls]
 Repository = "https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader"
