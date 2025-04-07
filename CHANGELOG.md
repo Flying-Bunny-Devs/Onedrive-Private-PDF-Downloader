@@ -1,3 +1,10 @@
+# [1.0.0-dev.9](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.8...v1.0.0-dev.9) (2025-04-07)
+
+
+### Features
+
+* add automated publishing on release ([daeed28](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/daeed28be1f5fc3b60da00934ea250286cd6e502))
+
 # [1.0.0-dev.8](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0-dev.7...v1.0.0-dev.8) (2025-04-07)
 
 
