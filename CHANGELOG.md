@@ -1,3 +1,10 @@
+## [1.0.1-dev.1](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0...v1.0.1-dev.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* `403` error on PyPi ([72644c6](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/72644c6fd3028710310c81a3921e332246ffb254))
+
 # 1.0.0 (2025-04-07)
 
 
