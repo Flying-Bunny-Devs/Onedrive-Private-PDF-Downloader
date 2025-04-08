@@ -31,7 +31,7 @@ This project allows you to export PDFs, even those that are protected, from auth
 ## 👀 Preview
 
 ```bash
-$ python OnedrivePrivatePDFDownloader.py --profile-dir /path/to/profile https://blabla.sharepoint.com/...
+$ onedrive-pdf-downloader --profile-dir /path/to/profile https://blabla.sharepoint.com/...
 
 INFO - Initializing browser: firefox
 Make sure to authenticate and reach the PDF preview. 
@@ -137,7 +137,7 @@ To use the `--cache-dir` option, you need to find the cache directory of your br
 
 ## 🛠️ Calibrating the Tool
 
-If the tool is not working correctly, you may need to update the class names and ARIA labels used to identify elements on the OneDrive page. These values are defined in the [OnedrivePrivatePDFDownloader.py](/OnedrivePrivatePDFDownloader.py#L26) file.
+If the tool is not working correctly, you may need to update the class names and ARIA labels used to identify elements on the OneDrive page. These values are defined in the [browser/constants.py](src/onedrive_pdf_downloader/browser/constants.py#L6) file.
 
 ### 📝 Steps to Calibrate:
 
@@ -145,7 +145,7 @@ If the tool is not working correctly, you may need to update the class names and
    - Use the browser's inspector tool (F12, Ctrl+Shift+I in most browsers, or right-click and select "Inspect") to find the class names or the ARIA labels for the elements used by the script.
 
 2. **Update the class names and ARIA labels in the script:**
-   - Open the [OnedrivePrivatePDFDownloader.py](/OnedrivePrivatePDFDownloader.py#L26) file.
+   - Open the [browser/constants.py](src/onedrive_pdf_downloader/browser/constants.py#L6) file.
    - Update the following lists with the new values:
      ```python
      CLASS_NAMES_TOTAL_PAGES = ["status_5a88b9b2"]  # Add the new class names for the total pages element
@@ -155,7 +155,7 @@ If the tool is not working correctly, you may need to update the class names and
      ```
 
 3. **Save the changes and run the script again:**
-   - Save the updated [OnedrivePrivatePDFDownloader.py](/OnedrivePrivatePDFDownloader.py) file.
+   - Save the updated [browser/constants.py](src/onedrive_pdf_downloader/browser/constants.py#L6) file.
    - Run the script with the updated values to ensure it works correctly.
 
 By following these steps, you can calibrate the tool to work with any changes in the OneDrive page structure.
