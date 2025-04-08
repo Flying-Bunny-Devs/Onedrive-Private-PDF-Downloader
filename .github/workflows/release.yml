@@ -53,7 +53,7 @@ jobs:
               run: uv sync
 
             - name: Build the project
-              run: uv build --wheel
+              run: uv build
 
             - name: Release
               env:

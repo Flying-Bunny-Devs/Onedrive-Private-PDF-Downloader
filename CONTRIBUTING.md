@@ -20,12 +20,12 @@ We welcome contributions to improve this tool. If you have found new class names
    ```
 
 2. **Make your changes:**
-   - Update the class names and/or ARIA labels in the [OnedrivePrivatePDFDownloader.py](/OnedrivePrivatePDFDownloader.py#L18) file. See the [Calibrating the Tool](/README.md#calibrating-the-tool) section for more details.
+   - Update the class names and/or ARIA labels in the [browser/constants.py](src/onedrive_pdf_downloader/browser/constants.py#L6) file. See the [Calibrating the Tool](/README.md#calibrating-the-tool) section for more details.
 
 3. **Commit your changes:**
    - Replace `<commit-message>` with a short description of your changes.
    ```bash
-   git add OnedrivePrivatePDFDownloader.py
+   git add .
    git commit -m "feat: <commit-message>"
    ```
 

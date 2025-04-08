@@ -20,7 +20,11 @@
             ],
             [
                 "@semantic-release/github",
-                { "assets": [{ "path": "dist/*.whl" }], successComment: false },
+                {
+                    "assets":
+                        [{ "path": "dist/*.whl" }, { "path": "dist/*.tar.gz" }],
+                    successComment: false,
+                },
             ],
             [
                 "@saithodev/semantic-release-backmerge",
