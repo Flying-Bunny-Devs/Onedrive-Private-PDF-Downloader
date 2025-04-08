@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.1...v1.1.0) (2025-04-08)
+
+
+### Bug Fixes
+
+* remove gitignore in release assets ([c5c7f6d](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/c5c7f6db4ae65ee2a8bea19b91d1736ebf60d719))
+
+
+### Features
+
+* include sources in release assets ([e9b8977](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/e9b8977c79244cbd35452f207d5017ec0980becb))
+
 # [1.1.0-dev.2](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.1.0-dev.1...v1.1.0-dev.2) (2025-04-08)
 
 
