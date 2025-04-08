@@ -43,6 +43,8 @@ jobs:
                   extra_plugins: |
                       @semantic-release/git
                       @semantic-release/exec
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Set version
               run: uvx --from=toml-cli toml set --toml-path=pyproject.toml project.version ${{env.NEXT_RELEASE_VERSION}}
