@@ -1,3 +1,11 @@
+## [1.0.1-dev.2](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.1-dev.1...v1.0.1-dev.2) (2025-04-08)
+
+
+### Bug Fixes
+
+* add GITHUB_TOKEN environment variable for semantic-release ([f9c959f](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/f9c959f0844503be8e8c3834cceadeac00afc4bb))
+* artifact name wasn't alligned on stable releases ([8ebdffb](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/commit/8ebdffb3ff5e71d2beaadc51571d8dbe4f107315))
+
 ## [1.0.1-dev.1](https://github.com/Flying-Bunny-Devs/Onedrive-Private-PDF-Downloader/compare/v1.0.0...v1.0.1-dev.1) (2025-04-07)
 
 
