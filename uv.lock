@@ -124,13 +124,13 @@ wheels = [
 
 [[package]]
 name = "img2pdf"
-version = "0.5.1"
+version = "0.6.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pikepdf" },
     { name = "pillow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/36/92/6ac4d61951ba507b499f674c90dfa7b48fa776b56f6f068507f8751c03f1/img2pdf-0.5.1.tar.gz", hash = "sha256:73847e47242f4b5bd113c70049e03e03212936c2727cd2a8bf564229a67d0b95", size = 104241, upload-time = "2023-11-26T05:34:11.854Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/c3/023387e00682dc1b46bd719ec19c4c9206dc8eb182dfd02bc62c5b9320a2/img2pdf-0.6.1.tar.gz", hash = "sha256:306e279eb832bc159d7d6294b697a9fbd11b4be1f799b14b3b2174fb506af289", size = 106513, upload-time = "2025-04-27T16:55:10.039Z" }
 
 [[package]]
 name = "iniconfig"
@@ -285,7 +285,7 @@ requires-dist = [
     { name = "deprecated", specifier = "==1.2.15" },
     { name = "h11", specifier = "==0.16.0" },
     { name = "idna", specifier = "==3.10" },
-    { name = "img2pdf", specifier = "==0.5.1" },
+    { name = "img2pdf", specifier = "==0.6.1" },
     { name = "lxml", specifier = "==5.4.0" },
     { name = "outcome", specifier = "==1.3.0.post0" },
     { name = "packaging", specifier = "==24.2" },
