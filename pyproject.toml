@@ -27,7 +27,7 @@ dependencies = [
     "trio==0.30.0",
     "trio-websocket==0.12.2",
     "typing-extensions==4.13.2",
-    "urllib3==2.4.0",
+    "urllib3==2.5.0",
     "websocket-client==1.8.0",
     "wrapt==1.17.2",
     "wsproto==1.2.0",
