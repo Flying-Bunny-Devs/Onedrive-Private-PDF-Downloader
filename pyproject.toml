@@ -10,7 +10,7 @@ name = "onedrive_pdf_downloader"
 dependencies = [
     "argparse==1.4.0",
     "attrs==25.3.0",
-    "certifi==2025.4.26",
+    "certifi==2025.7.14",
     "deprecated==1.2.18",
     "h11==0.16.0",
     "idna==3.10",
