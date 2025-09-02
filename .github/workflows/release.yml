@@ -37,7 +37,7 @@ jobs:
                   cache-dependency-glob: "**/pyproject.toml"
 
             - name: Determine the next release version
-              uses: cycjimmy/semantic-release-action@v4
+              uses: cycjimmy/semantic-release-action@v5
               with:
                   dry_run: true
                   extra_plugins: |
